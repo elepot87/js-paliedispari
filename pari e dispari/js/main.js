@@ -48,9 +48,9 @@ if (
   (userNum % 2 == 0 && resultGame % 2 == 0) ||
   (userNum % 2 != 0 && resultGame % 2 != 0)
 ) {
-  console.log("hai vinto");
+  document.querySelector(".vincitore").innerHTML = "hai vinto :)";
 } else {
-  console.log("hai perso");
+  document.querySelector(".vincitore").innerHTML = "hai perso :(";
 }
 
 /**************************
