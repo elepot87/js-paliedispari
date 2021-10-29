@@ -6,7 +6,11 @@
 // Dichiariamo chi ha vinto.
 
 //Utente scrive se pari o dispari
-const userChoice = prompt("Scrivi se preferisci pari o dispari");
+let userChoice = prompt("Scrivi se preferisci pari o dispari");
+
+while (userChoice !== "pari" && userChoice !== "dispari") {
+  userChoice = prompt("Scrivi se preferisci pari o dispari");
+}
 
 let userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 // Validazione del dato inserito dall'utente, finché non lo inserisce correttamente
