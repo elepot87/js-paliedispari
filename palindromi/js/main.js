@@ -15,7 +15,7 @@ if (userWord == userReversed) {
 /************************+
 Funzioni
  *************************/
-
+// Funzione con ciclo for
 // function reverseChars(word) {
 //   let reverse = "";
 
