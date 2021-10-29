@@ -8,22 +8,17 @@
 //Utente scrive se pari o dispari
 const userChoice = prompt("Scrivi se preferisci pari o dispari");
 
-const userNum = prompt("Inserisci un numero da 1 a 5");
+let userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 // Validazione del dato inserito dall'utente, finché non lo inserisce correttamente
 
 while (isNaN(userNum) || userNum < 1 || userNum > 5) {
-  let userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
-  if (!isNaN(userNum) || userNum >= 1 || userNum <= 5) {
-    break;
-  }
+  userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 }
 
-console.log(userNum);
-
 // Stampiamo nel DOM la scelta dell'utente
-// const printUserChoice = (document.querySelector(
-//   ".utente"
-// ).innerHTML = `La scelta dell'utente è ${userNum}`);
+const printUserChoice = (document.querySelector(
+  ".utente"
+).innerHTML = `La scelta dell'utente è ${userNum}`);
 
 // Il computer deve generare una funzione che crei un numero random da 1 a 5, richiamando una funzione
 const computerChoice = getRandom();
@@ -35,6 +30,15 @@ const printComputerChoice = (document.querySelector(
 ).innerHTML = `La scelta del computer è ${computerChoice}`);
 
 // Sommiamo i due numeri
+const numAddition = computerChoice + userNum;
+
+const printAddition = (document.querySelector(
+  ".somma"
+).innerHTML = `La scelta del computer è ${numAddition}`);
+
+// Stabiliamo se la somma ottenuta è un numero pari o dispari
+
+const resultGame = evenOdd(numAddition);
 
 /**************************
 Funzioni
@@ -43,4 +47,16 @@ Funzioni
 function getRandom() {
   const rand = Math.floor(Math.random() * 5) + 1;
   return rand;
+}
+
+function evenOdd(num) {
+  let result;
+  if (num % 2 == 0) {
+    document.querySelector(".risultato").innerHTML =
+      "La somma ottenuta è un numero pari";
+  } else {
+    document.querySelector(".risultato").innerHTML =
+      "La somma ottenuta è un numero dispari";
+  }
+  return result;
 }
