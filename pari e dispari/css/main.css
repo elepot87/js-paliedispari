@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 50px auto;
+  width: 1170px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 20px 0;
+}
+#pari,
+#dispari {
+  width: 100px;
+  padding: 5px 10px;
+  font-size: 18px;
+  margin: 0 10px;
+}
