@@ -38,7 +38,16 @@ const printAddition = (document.querySelector(
 
 // Stabiliamo se la somma ottenuta è un numero pari o dispari
 
-const resultGame = evenOdd(numAddition);
+let resultGame = evenOdd(numAddition);
+
+if (
+  (userNum % 2 == 0 && resultGame % 2 == 0) ||
+  (userNum % 2 != 0 && resultGame % 2 != 0)
+) {
+  console.log("hai vinto");
+} else {
+  console.log("hai perso");
+}
 
 /**************************
 Funzioni
@@ -50,7 +59,7 @@ function getRandom() {
 }
 
 function evenOdd(num) {
-  let result;
+  let result = num;
   if (num % 2 == 0) {
     document.querySelector(".risultato").innerHTML =
       "La somma ottenuta è un numero pari";
