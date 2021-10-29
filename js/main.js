@@ -16,13 +16,17 @@ if (userWord == userReversed) {
 Funzioni
  *************************/
 
+// function reverseChars(word) {
+//   let reverse = "";
+
+//   for (let i = userWord.length - 1; i >= 0; i--) {
+//     // console.log(word[i]);
+//     reverse += word[i];
+//   }
+
+//   return reverse;
+// }
+
 function reverseChars(word) {
-  let reverse = "";
-
-  for (let i = userWord.length - 1; i >= 0; i--) {
-    // console.log(word[i]);
-    reverse += word[i];
-  }
-
-  return reverse;
+  return word.split("").reverse().join("");
 }
