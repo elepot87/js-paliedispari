@@ -8,6 +8,7 @@
 //Utente scrive se pari o dispari
 const userChoice = prompt("Scrivi se preferisci pari o dispari");
 
+const userNum = prompt("Inserisci un numero da 1 a 5");
 // Validazione del dato inserito dall'utente, finché non lo inserisce correttamente
 
 while (isNaN(userNum) || userNum < 1 || userNum > 5) {
