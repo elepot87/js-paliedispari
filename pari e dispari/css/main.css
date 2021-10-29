@@ -15,10 +15,11 @@ h1,
 h2 {
   margin: 20px 0;
 }
-#pari,
-#dispari {
-  width: 100px;
-  padding: 5px 10px;
-  font-size: 18px;
-  margin: 0 10px;
+
+h2.utente {
+  color: rebeccapurple;
+}
+
+h2.computer {
+  color: green;
 }
