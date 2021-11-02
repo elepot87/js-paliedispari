@@ -38,7 +38,7 @@ const numAddition = computerChoice + userNum;
 
 const printAddition = (document.querySelector(
   ".somma"
-).innerHTML = `La scelta del computer è ${numAddition}`);
+).innerHTML = `La somma dei due numeri è ${numAddition}`);
 
 // Stabiliamo se la somma ottenuta è un numero pari o dispari
 
